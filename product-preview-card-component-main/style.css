@@ -30,6 +30,9 @@ body {
   width: 315px;
   border-radius: 16px 0 0 16px;
 }
+.main .i2 {
+  display: none;
+}
 .main .info {
   width: 315px;
   background: #fff;
@@ -116,6 +119,12 @@ body {
     border-radius: 12px 12px 0 0;
     z-index: 1;
     width: 100%;
+  }
+  .main .i1 {
+    display: none;
+  }
+  .main .i2 {
+    display: block;
   }
   .main .info {
     z-index: 2;
