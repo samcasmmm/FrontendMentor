@@ -131,6 +131,17 @@ hr {
   z-index: -1;
   overflow-y: hidden;
 }
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
 @media screen and (max-width: 400px) {
   .container {

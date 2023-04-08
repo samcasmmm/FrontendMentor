@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+  --Cobalt-blue: hsl(234, 85%, 45%);
+
+  --Light-slate-blue: hsl(252, 100%, 67%);
+  --Light-royal-blue: hsl(241, 81%, 54%);
+  /* (circle) */
+  --Violet-blue: hsla(256, 72%, 46%, 1);
+  --Persian-blue: hsla(241, 72%, 46%, 0);
+
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: var(--Light-lavender); */
+  flex-direction: column;
+}
+main {
+  background: white;
+  display: flex;
+  flex-direction: row;
+  border-radius: 2rem;
+  box-shadow: var(--Light-lavender) 10px 5px 90px;
+}
+main .left {
+  background: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+  flex: 1;
+  text-align: center;
+  padding: 1rem 0;
+  color: white;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-evenly; */
+  width: 350px;
+  height: 510px;
+}
+main .left .title {
+  margin-top: 2rem;
+  opacity: 0.8;
+  font-size: 26px;
+  font-weight: 700;
+}
+main .left .result {
+  margin-top: 1.5rem;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  border-radius: 50%;
+  background: linear-gradient(var(--Violet-blue), var(--Persian-blue));
+}
+main .left .result span {
+  font-size: 52px;
+  font-weight: 800;
+}
+main .left .result p {
+  opacity: 0.4;
+}
+main .left .sub-title {
+  margin: 1.5rem;
+  font-size: 28px;
+}
+main .left .text {
+  margin: 0.5rem 3rem;
+  opacity: 0.6;
+  font-size: 18px;
+}
+main .right {
+  flex: 1;
+  width: 300px;
+  height: 510px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .right .title {
+  margin-top: 2rem;
+  font-size: 22px;
+  font-weight: 700;
+  width: 100%;
+  text-align: left;
+  margin-left: 10px;
+}
+main .right .items-grp {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 16px;
+}
+main .right .items-grp img {
+  padding: 0.3rem;
+}
+
+main .right .items-grp .item {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: none;
+  width: 300px;
+}
+main .right .items-grp .item div {
+  padding: 0.3rem;
+}
+main .right .items-grp .item.i1 {
+  background: rgba(255, 87, 87, 0.1);
+  color: #ff5757;
+}
+main .right .items-grp .item.i2 {
+  background: rgba(255, 176, 31, 0.1);
+  color: #ffb01f;
+}
+main .right .items-grp .item.i3 {
+  background: rgba(0, 189, 145, 0.1);
+  color: #00bd91;
+}
+main .right .items-grp .item.i4 {
+  background: rgba(17, 97, 212, 0.1);
+  color: #1125d4;
+}
+
+main .right .items-grp .item div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+main .right button {
+  padding: 1rem;
+  margin-top: 1.5rem;
+  width: 90%;
+  border-radius: 2rem;
+  border: none;
+  background: var(--Cobalt-blue);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+main .right button:active {
+  background: var(--Dark-gray-blue);
+}
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+  padding: 2rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 375px) {
+  main {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: space-between;
+    background: white;
+  }
+  main .left {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0 0 2rem 2rem;
+  }
+  main .left .title {
+    margin-top: 1rem;
+    font-size: 18px;
+  }
+  main .left .result {
+    width: 150px;
+    height: 150px;
+  }
+  main .left .sub-title {
+    margin: 0;
+    margin-top: 0.5rem;
+    font-size: 24px;
+  }
+  main .left .text {
+    margin: 0.8 1.2rem;
+    font-size: 16px;
+  }
+  main .right {
+    width: 100%;
+  }
+  main .right .title {
+    margin-top: 0.5rem;
+    font-size: 18px;
+  }
+  main .right .items-grp {
+    width: 100%;
+  }
+  main .right .items-grp .item {
+    width: 100%;
+  }
+  .attribution {
+    position: relative;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+}
